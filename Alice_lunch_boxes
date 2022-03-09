@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int tc,N,M;
+	cin>>tc;
+	while(tc-->0)
+	{
+		cin>>N>>M;
+		int arr[M];
+		int max=0,count=0;
+		for(int i = 0;i<M;i++)
+		{
+			cin>>arr[i];
+		}
+		sort(arr, arr+M);
+		for(int i=0;i<M;i++)
+		{
+			max+= arr[i];
+			if(max<=N)
+			{
+				count++;
+			}
+			else
+				break;
+		}
+		cout<<count<<endl;
+	}
+	
+}
